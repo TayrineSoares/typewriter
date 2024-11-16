@@ -1,11 +1,14 @@
 const typeWriter = function (str) {
-  let initialTimer = 500;
+  let initialTimer = 200;
   for (const char of str) {
   //console.log(char);
     setTimeout(() => {
       process.stdout.write(char); 
     }, (initialTimer += 200));
   }
+  setTimeout(() => {
+    console.log("\n");
+  }, ((str.length * 250)));
 };
 
 const sentence = "hello there from lighthouse labs";
